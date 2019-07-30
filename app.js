@@ -95,11 +95,19 @@ app.factory("bookService", function(){
  }
 });
 
-app.controller('HeaderCtrl', function($scope) {
+app.controller('HeaderCtrl', function($scope,$location) {
     $scope.appDetails = {
         title:"BookShop",
         tagline:"We have 1 million books for you"
     };
+
+    $scope.nav = {};
+    $scope.nav.isActive = function(path){
+        if(path === $location.path()){
+            return true;
+        }
+        return false;
+    }
   });
 
 app.controller('cartListCtrl',function($scope,cartService){

@@ -20,8 +20,8 @@
         <span class="tagline pull-left">{{appDetails.tagline}}</span>
         <div class="nav-wrapper pull-left">
             <ul class="nav nav-pills">
-                <li class="active"> <a href="#!/books">Books </a></li>
-                <li> <a href="#!/cart">Cart</a></li>
+                <li ng-class="{active: nav.isActive('/books')}"> <a href="#!/books">Books </a></li>
+                <li ng-class="{active: nav.isActive('/cart')}"> <a href="#!/cart">Cart</a></li>
             </ul>
         </div>
 
