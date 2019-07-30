@@ -33,15 +33,16 @@
 
         <div>
           <ul class="list-unstyled">
-              <li class="book" style="background: white url(https://via.placeholder.com/140x300) no-repeat">
+              <li class="book" style="background: white url( {{book.imgUrl}}) no-repeat"
+                ng-repeat="book in books">
                 <div class="book-details clearfix">
-                    <h3>Adultery</h3>
-                    <p>205</p>
+                    <h3>{{book.name}}</h3>
+                    <p>{{book.price}}</p>
                     <ul class="list-unstyled list-inline">
-                        <li>Rating: 4</li>
-                        <li>Binding: Paperback</li>
-                        <li>Publisher:  Random House India</li>
-                        <li>Released: 12-08-2014</li>
+                        <li>Rating: {{book.rating}}</li>
+                        <li>Binding: {{book.binding}}</li>
+                        <li>Publisher: {{book.publisher}}</li>
+                        <li>Released: {{book.releaseDate}}</li>
                     </ul>
 
                     <p>Buffalo doner pork kevin capicola pig meatball cow shoulder pancetta jerky turkey. Bresaola pig beef ground round.</p>

@@ -22,7 +22,7 @@ app.controller('BookListCtrl',function($scope){
             details:"Meatball corned beef shankle porchetta, tail biltong andouille capicola ground round meatloaf t-bone short loin pork chop. Burgdoggen jowl pastrami fatback. "
         },
         {
-            imgUrl:"https://via.placeholder.com/140x300",
+            imgUrl:"https://via.placeholder.com/140x200",
             name:"Thomas",
             price:304,
             rating:4,
@@ -33,7 +33,7 @@ app.controller('BookListCtrl',function($scope){
   
         },
         {
-            imgUrl:"https://via.placeholder.com/140x300",
+            imgUrl:"https://via.placeholder.com/140x150",
             name:"Martin",
             price:426,
             rating:4,
