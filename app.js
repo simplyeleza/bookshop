@@ -54,7 +54,12 @@ app.controller('BookListCtrl',function($scope){
             details:"Ground round salami tongue bacon landjaeger prosciutto porchetta bresaola beef ribs biltong spare "
 
         }
-    ]
+    ];
+
+
+    $scope.addToCart = function(book){
+        console.log("add to kart: ", book);
+    }
 
 
 });
