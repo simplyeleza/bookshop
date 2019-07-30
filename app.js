@@ -19,6 +19,26 @@ app.config(function($routeProvider){
 });
 
 
+app.factory("cartService", function(){
+
+var cart= [];
+
+
+
+return {
+    getCart: function(){
+        return cart;
+    },
+    addToCart:function(book){
+        cart.push(book);
+    },
+    buy:function(book){
+         alert("Thanks for buying: " , book.name);
+    }
+}
+
+}); 
+
 
 app.factory("bookService", function(){
 
@@ -82,25 +102,25 @@ app.controller('HeaderCtrl', function($scope) {
     };
   });
 
-app.controller('cartListCtrl',function($scope){
+app.controller('cartListCtrl',function($scope,cartService){
 
-   $scope.cart= [];
+   $scope.cart= cartService.getCart();
 
    $scope.buy = function(book){
-        console.log("buy: ", book);
+        cartService.buy(book);
    }
 
   });
 
 
 
-app.controller('BookListCtrl',function($scope, bookService){
+app.controller('BookListCtrl',function($scope, bookService,cartService){
 
     $scope.books = bookService.getBooks();
 
 
     $scope.addToCart = function(book){
-        console.log("add to kart: ", book);
+        cartService.addToCart(book)
     }
 
 
