@@ -21,3 +21,24 @@
 margin-left: 100px;
 margin-top: 15px;
 }
+
+
+#bookListWrapper{
+    width: 100%;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+#bookListWrapper input{
+    width: 25%;
+}
+
+#bookListWrapper .book{
+ border: 1px solid gray;
+ padding: 10px;
+ margin-bottom: 10px;
+}
+
+#bookListWrapper .book .book-details{
+  margin-left: 160px;
+}
