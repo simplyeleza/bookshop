@@ -8,7 +8,8 @@ app.config(function($routeProvider){
            controller:"BookListCtrl"
        })
        .when("/cart",{
-           templateUrl:"partials/cart-list.html"
+           templateUrl:"partials/cart-list.html",
+           controller:"cartListCtrl"
        })
        .otherwise({
            redirectTo: "/books"
@@ -24,6 +25,18 @@ app.controller('HeaderCtrl', function($scope) {
         tagline:"We have 1 million books for you"
     };
   });
+
+  app.controller('cartListCtrl',function($scope){
+
+   $scope.cart= [];
+
+   $scope.buy = function(book){
+        console.log("buy: ", book);
+   }
+
+  });
+
+
 
 app.controller('BookListCtrl',function($scope){
 
